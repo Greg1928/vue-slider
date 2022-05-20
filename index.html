@@ -24,7 +24,7 @@
             <div class="thumbs">
                 <div class="prev" @click="prevIndex()"></div>
 
-                <div class="thumb" v-for="(image, i) in images" :class="{active : index===i}">
+                <div class="thumb" v-for="(image, i) in images" :class="{active : index===i}" @click="currentImage(i)">
                     <img :src="image.src" alt="">
                 </div> 
             
