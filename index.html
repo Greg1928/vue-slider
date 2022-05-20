@@ -13,7 +13,7 @@
             <div class="items">
                 
                 <div class="item active">
-                    <img src="./img/01.jpg" alt="">
+                    <img :src="images[index].src" alt="">
                     <div class="text">
                         <h3>Lorem</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
@@ -22,14 +22,14 @@
             
             </div>
             <div class="thumbs">
-                <div class="prev"></div>
+                <div class="prev" @click="prevIndex()"></div>
 
                 <div class="thumb" v-for="image in images">
                     <img :src="image.src" alt="">
                 </div> 
             
                 
-                <div class="next"></div>
+                <div class="next" @click="nextIndex()"></div>
             </div>
     </div>
 
